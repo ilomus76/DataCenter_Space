@@ -10,14 +10,14 @@
 
 
 #### local : 
-> git config
-> git status 
-> git add .
-> git commit -m "message"
-> git push or git push --set-upstream origin main or dev
-> git clone "git address"
-> git fetch origin main or dev
-> git pull --rebase origin main or dev
+> git config  
+> git status   
+> git add .  
+> git commit -m "message"  
+> git push or git push --set-upstream origin main or dev  
+> git clone "git address"  
+> git fetch origin main or dev  
+> git pull --rebase origin main or dev  
 
 ### github에서 pull request 해서 merge
 
