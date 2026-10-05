@@ -1,6 +1,6 @@
 # DataCenter_Space
-> 20261005 
->This place is the one where I collect all of my data for the space
+> 20261005  
+> This place is the one where I collect all of my data for the space
 
 #### 브랜치는 main , dev , project 순으로 관리를 한다.
 > main 브랜치는 배포용
