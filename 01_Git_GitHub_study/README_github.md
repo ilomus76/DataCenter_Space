@@ -21,6 +21,11 @@ https://docs.google.com/document/d/1obRG5PS62xQWqpNwDPsEOCrKuTshdXSNZVx93ZWdBbg/
 > git fetch origin main or dev  
 > git pull --rebase origin main or dev  
 
+#### github
+##### GitHub(origin)에 있는 원격 브랜치 목록을 봅니다.
+> git branch -r
+
+
 ### github에서 pull request 해서 merge
 
 ### 이곳에서 행하는 모든 데이타 행위는 local repository에서 fetch 가 되어서 git full 되어야 한다. 
