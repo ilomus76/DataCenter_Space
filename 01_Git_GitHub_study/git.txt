@@ -1,4 +1,6 @@
 # git command 
+# 참고 사이트 :  나의 구글 독스 
+https://docs.google.com/document/d/1obRG5PS62xQWqpNwDPsEOCrKuTshdXSNZVx93ZWdBbg/edit?tab=t.wk8wddcue7an
 
 git config --global user.name "홍길동"       # 모든 저장소에서 사용할 Git 사용자 이름을 설정합니다.
 git config --global user.email "you@example.com" # 모든 저장소에서 사용할 Git 이메일을 설정합니다.
