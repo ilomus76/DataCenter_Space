@@ -1,0 +1,51 @@
+# git command 
+
+git config --global user.name "홍길동"       # 모든 저장소에서 사용할 Git 사용자 이름을 설정합니다.
+git config --global user.email "you@example.com" # 모든 저장소에서 사용할 Git 이메일을 설정합니다.
+git remote -v                                # 연결된 원격 저장소의 fetch/push 주소를 확인합니다.
+git status                                   # 현재 브랜치와 변경 파일, 진행 중인 rebase 여부를 확인합니다.
+git fetch origin                             # 원격 저장소의 최신 정보를 가져오되, 현재 작업 파일에는 합치지 않습니다.
+git pull --rebase origin main                # 원격 main의 변경사항을 가져와 내 로컬 커밋 위에 다시 적용합니다.
+git add <파일명>                             # 수정했거나 충돌을 해결한 파일을 다음 커밋 대상으로 지정합니다.
+git rebase --continue                        # 충돌을 해결하고 git add 한 뒤, 진행 중인 rebase를 계속합니다.
+git rebase --abort                           # 진행 중인 rebase를 취소하고 시작 전 상태로 되돌립니다.
+git push --set-upstream origin main           # 로컬 main을 원격 저장소에 올리고, 이후 push/pull 기본 연결을 설정합니다.
+
+
+
+2.  git pull --rebase origin main 와 관련한 명령어와 주석도 같이 넣어 주세요.
+아래는 git pull --rebase origin main과 관련된 명령을 순서대로 정리한 Markdown용 코드입니다.
+
+git status
+# 현재 브랜치와 작업 상태를 확인합니다.
+# 이미 rebase가 진행 중인지도 여기서 확인할 수 있습니다.
+
+git fetch origin
+# 원격 저장소(origin)의 최신 정보를 가져옵니다.
+# 로컬 파일이나 브랜치에는 아직 합치지 않습니다.
+
+git pull --rebase origin main
+# 원격 저장소의 main 브랜치를 가져와 현재 브랜치의 로컬 커밋 아래에 다시 적용합니다.
+# push가 non-fast-forward 또는 fetch first 오류로 거절됐을 때 사용할 수 있습니다.
+
+git status
+# pull --rebase 결과를 확인합니다.
+# 충돌이 발생했다면 어떤 파일을 해결해야 하는지 확인합니다.
+
+# 충돌이 발생한 경우: 해당 파일을 열어 충돌 표시(<<<<<<, ======, >>>>>>)를 정리한 뒤 저장합니다.
+git add <파일명>
+# 충돌을 해결한 파일을 rebase 완료 대상으로 표시합니다.
+
+git rebase --continue
+# 충돌 해결 후 rebase를 계속합니다.
+# 추가 충돌이 발생하면 파일 수정, git add, git rebase --continue를 반복합니다.
+
+git rebase --abort
+# 진행 중인 rebase를 취소하고 rebase 시작 전 상태로 되돌립니다.
+# rebase를 계속하지 않기로 결정했을 때 사용합니다.
+
+git push --set-upstream origin main
+# rebase가 성공적으로 끝난 뒤 로컬 main을 원격 저장소에 올립니다.
+# --set-upstream은 이후 push/pull의 기본 원격 브랜치도 설정합니다.
+git pull --rebase origin main은 현재 체크아웃된 브랜치 위에 원격 main의 변경사항을 반영합니다. 따라서 main을 업데이트하려는 작업이라면 먼저 git switch main으로 로컬 main에 있는지 확인한 뒤 실행하세요.
+
